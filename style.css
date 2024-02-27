@@ -1,0 +1,198 @@
+@font-face {
+    font-family: HankenGrotesk;
+    src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-content: center;
+    text-align: center;
+    min-height: 100%;
+    font-size: 18px;
+    font-family: HankenGrotesk;
+    background-color: hsl(0, 0%, 100%)
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.object {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    margin: auto;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 25px;
+    box-shadow: 0px 15px 35px hsla(241, 100%, 89%, 50%);
+}
+
+.leftside, .rightside {
+    width: 330px;
+}
+
+/* 1. Left Side  */
+
+.leftside {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    color: hsl(0, 0%, 100%);
+    padding: 2.5rem;
+    border-radius: 25px;
+}
+
+.leftside h2 {
+    opacity: 0.7;
+    margin-bottom: 1.3rem;
+}
+
+.leftside h4 {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin: 1rem auto;
+}
+
+.leftside p {
+    opacity: .6;
+}
+
+.circleresult {
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    width: fit-content;
+    margin: 1rem auto;
+    border-radius: 50%;
+    padding: 2rem 3rem;
+}
+
+.circleresult h3 {
+    font-size: 4rem;
+}
+
+.circleresult aside {
+    font-size: .9rem;
+    opacity: 0.5;
+}
+
+/* 2. Right Side  */
+
+.rightside {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2.5rem 2rem;
+}
+
+.rightside h2 {
+    text-align: start;
+    margin-bottom: 1rem;
+}
+
+.rightside .skill {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+    align-items: center;
+    margin: .4rem 0;
+    padding: .9rem;
+}
+
+.skill img {
+    position: relative;
+    top: 3px;
+    margin-right: .8rem;
+}
+
+.rightside .red {
+    background-color: hsla(0, 100%, 67%, 5%);
+}
+
+.red .name {
+    color: hsl(0, 100%, 67%);
+}
+
+.rightside .yellow {
+    background-color: hsla(39, 100%, 56%, 5%);
+}
+
+.yellow .name {
+    color: hsl(39, 100%, 56%);
+}
+
+.rightside .green {
+    background-color: hsla(166, 100%, 37%, 5%);
+}
+
+.green .name {
+    color: hsl(166, 100%, 37%);
+}
+
+.rightside .blue {
+    background-color: hsla(234, 85%, 45%, 5%);
+}
+
+.blue .name {
+    color: hsl(234, 85%, 45%);
+}
+
+.skill .score {
+    color: hsla(0, 0%, 0%, 50%);
+
+    strong {
+        color: hsla(0, 0%, 0%, 100%);
+    }
+}
+
+/* 3. Button */
+
+.button {
+    background-color: hsl(224, 30%, 27%);
+    border-radius: 1.6rem;
+    padding: .9rem;
+    margin-top: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+}
+
+.button:hover {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+/* 4. Breakpoint  */
+
+@media only screen and (max-width: 655px) {
+    .leftside, .rightside {
+        width: 100%;
+    }
+
+    .leftside {
+        height: fit-content;
+    }
+
+    .object {
+        margin: 0;
+        align-content: flex-start;
+    }
+
+    .leftside {
+        border-radius: 0 0 25px 25px;
+    }
+}
